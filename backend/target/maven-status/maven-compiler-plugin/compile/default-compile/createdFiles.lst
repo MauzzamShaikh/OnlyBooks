@@ -1,0 +1,8 @@
+com\bookstore\model\User.class
+com\bookstore\model\User$Rental.class
+com\bookstore\model\User$Purchase.class
+com\bookstore\service\UserService.class
+com\bookstore\controller\AuthHandler.class
+com\bookstore\controller\OrderHandler.class
+com\bookstore\repository\UserRepository.class
+com\bookstore\Main.class

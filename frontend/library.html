@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library - OnlyBooks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Library Section -->
+    <section class="library-section">
+        <div class="container">
+            <div class="library-layout">
+                <!-- Sidebar -->
+                <aside class="library-sidebar">
+                    <nav class="library-nav">
+                        <a href="#" class="library-nav-item active" data-category="all">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3 3H17V17H3V3Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M7 3V17M13 3V17" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            All Books
+                        </a>
+                        <a href="#" class="library-nav-item" data-category="owned">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3 3H12L17 7V17H3V3Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 3V7H17" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Owned
+                        </a>
+                        <a href="#" class="library-nav-item" data-category="rented">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="2" y="5" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M6 5V3M14 5V3M2 9H18" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Rented
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="library-main">
+                    <div class="library-header">
+                        <h2 class="library-title">Your Books</h2>
+                        <div class="library-controls">
+                            <div class="library-sort">
+                                <label for="librarySort">Sort By:</label>
+                                <select id="librarySort">
+                                    <option value="recent">Recently Added</option>
+                                    <option value="title">Title</option>
+                                    <option value="author">Author</option>
+                                </select>
+                            </div>
+                            <div class="library-view">
+                                <label>View As:</label>
+                                <button class="view-btn active" data-view="grid">Grid</button>
+                                <button class="view-btn" data-view="list">List</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Books Grid -->
+                    <div id="libraryBooks" class="library-books-grid">
+                        <div class="empty-library">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="60" cy="60" r="50" stroke="#E0E0E0" stroke-width="4"/>
+                                <path d="M40 40H80V80H40V40Z" stroke="#E0E0E0" stroke-width="3"/>
+                                <path d="M55 40V80M70 40V80" stroke="#E0E0E0" stroke-width="3"/>
+                            </svg>
+                            <h3>No books in your library yet</h3>
+                            <p>Start building your collection!</p>
+                            <a href="index.html" class="btn-primary">Browse Books</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="toast" class="toast"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OnlyBooks. All rights reserved.</p>
+            <p>Powered by Google Books API</p>
+        </div>
+    </footer>
+
+    <script src="header.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - OnlyBooks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Settings Section -->
+    <section class="settings-section">
+        <div class="container">
+            <h2 class="page-title">Account Settings</h2>
+            
+            <div class="settings-layout">
+                <!-- Sidebar -->
+                <aside class="settings-sidebar">
+                    <nav class="settings-nav">
+                        <a href="#" class="settings-nav-item active" data-tab="profile">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M2 18C2 14.686 5.582 12 10 12C14.418 12 18 14.686 18 18" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Profile
+                        </a>
+                        <a href="#" class="settings-nav-item" data-tab="security">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="8" width="10" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M7 8V6C7 4.34315 8.34315 3 10 3C11.6569 3 13 4.34315 13 6V8" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Security & Password
+                        </a>
+                        <a href="#" class="settings-nav-item" data-tab="notifications">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 2C7 2 5 4 5 7V11L3 13V14H17V13L15 11V7C15 4 13 2 10 2Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M8 14V15C8 16.1046 8.89543 17 10 17C11.1046 17 12 16.1046 12 15V14" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Email & Notifications
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="settings-main">
+                    <!-- Profile Tab -->
+                    <div class="settings-tab active" id="profileTab">
+                        <h3>Profile Information</h3>
+                        <form class="settings-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" id="settingsName" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Email Address</label>
+                                    <input type="email" id="settingsEmail" placeholder="Your email" disabled>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label>Bio / Short Description</label>
+                                    <textarea id="settingsBio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="settings-tab" id="securityTab">
+                        <h3>Security & Password</h3>
+                        <form class="settings-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Current Password</label>
+                                    <input type="password" id="currentPassword" placeholder="Enter current password" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password" id="newPassword" placeholder="Enter new password" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Confirm New Password</label>
+                                    <input type="password" id="confirmPassword" placeholder="Confirm new password" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">Update Password</button>
+                        </form>
+                    </div>
+
+                    <!-- Notifications Tab -->
+                    <div class="settings-tab" id="notificationsTab">
+                        <h3>Email & Notifications</h3>
+                        <div class="settings-form">
+                            <div class="notification-option">
+                                <div class="notification-info">
+                                    <h4>Order Updates</h4>
+                                    <p>Receive emails about your order status</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked aria-label="Order Updates notifications" title="Order Updates">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="notification-option">
+                                <div class="notification-info">
+                                    <h4>New Releases</h4>
+                                    <p>Get notified about new book releases</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked aria-label="New Releases notifications" title="New Releases">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="notification-option">
+                                <div class="notification-info">
+                                    <h4>Recommendations</h4>
+                                    <p>Personalized book recommendations</p>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" aria-label="Recommendations notifications" title="Recommendations">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="toast" class="toast"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OnlyBooks. All rights reserved.</p>
+            <p>Powered by Google Books API</p>
+        </div>
+    </footer>
+
+    <script src="header.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

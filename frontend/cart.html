@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - OnlyBooks</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h2 class="page-title">Your Shopping Cart</h2>
+            
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems">
+                    <div class="empty-cart" id="emptyCart">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="60" cy="60" r="50" stroke="#E0E0E0" stroke-width="4"/>
+                            <path d="M45 30L37.5 45H22.5C21.125 45 20 46.125 20 47.5V72.5C20 73.875 21.125 75 22.5 75H97.5C98.875 75 100 73.875 100 72.5V47.5C100 46.125 98.875 45 97.5 45H82.5L75 30H45Z" stroke="#E0E0E0" stroke-width="3"/>
+                            <line x1="50" y1="55" x2="70" y2="55" stroke="#E0E0E0" stroke-width="3"/>
+                        </svg>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added any books yet.</p>
+                        <p class="empty-subtitle">Start exploring our amazing collection!</p>
+                        <a href="index.html" class="btn-primary browse-btn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M3 10H17M17 10L11 4M17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Browse Books
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cart-summary hidden" id="cartSummary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span>Items in cart:</span>
+                            <span id="totalItems">0</span>
+                        </div>
+                        <div class="summary-divider"></div>
+                        <p class="summary-note">Select buy or rent option for each item to proceed</p>
+                        <button class="btn-primary btn-block" id="checkoutBtn">Proceed to Checkout</button>
+                        <button class="btn-secondary btn-block" id="clearCartBtn">Clear Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="checkout-content">
+                <h2>Checkout</h2>
+                <div id="checkoutDetails">
+                    <!-- Checkout details will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OnlyBooks. All rights reserved.</p>
+            <p>Powered by Google Books API</p>
+        </div>
+    </footer>
+
+    <script src="header.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

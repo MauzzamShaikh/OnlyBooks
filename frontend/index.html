@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyBooks - Your Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Discover Your Next Great Read</h2>
+                <p class="hero-subtitle">Explore millions of books, buy or rent instantly</p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#666" stroke-width="2"/>
+                            <path d="M19 19L14.65 14.65" stroke="#666" stroke-width="2"/>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search books by title, author, or ISBN..." aria-label="Search books by title, author, or ISBN">
+                        <button type="button" class="search-btn">Search</button>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" aria-label="Select category">
+                            <option value="">All Categories</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="science">Science</option>
+                            <option value="history">History</option>
+                            <option value="biography">Biography</option>
+                            <option value="technology">Technology</option>
+                            <option value="business">Business</option>
+                            <option value="self-help">Self Help</option>
+                            <option value="romance">Romance</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="thriller">Thriller</option>
+                            <option value="poetry">Poetry</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortFilter">Sort By:</label>
+                        <select id="sortFilter" aria-label="Select sort order">
+                            <option value="relevance">Relevance</option>
+                            <option value="newest">Newest</option>
+                            <option value="price">Price</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Books Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Discover Books</h2>
+            <div id="booksContainer" class="books-grid">
+                <div class="loading">Loading books...</div>
+            </div>
+            <div id="loadMoreContainer" class="load-more-container">
+                <button id="loadMoreBtn" class="load-more-btn">Load More Books</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Modal -->
+    <div id="bookModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="bookDetails" class="book-details">
+                <!-- Book details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 OnlyBooks. All rights reserved.</p>
+            <p>Powered by Google Books API</p>
+        </div>
+    </footer>
+
+    <script src="header.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

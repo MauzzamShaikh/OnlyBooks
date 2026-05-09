@@ -10,8 +10,8 @@ FROM eclipse-temurin:21
 
 WORKDIR /app
 
-COPY --from=build /app/target/classes ./target/classes
+COPY --from=build /app/target/onlinebookstore-backend-1.0-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-cp", "target/classes", "com.bookstore.Main"]
+CMD ["java", "-jar", "app.jar"]

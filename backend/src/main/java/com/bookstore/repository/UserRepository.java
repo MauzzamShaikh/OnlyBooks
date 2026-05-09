@@ -19,8 +19,8 @@ public class UserRepository {
     private final MongoCollection<Document> usersCollection;
 
     public UserRepository() {
-        MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017");
-        MongoDatabase database = mongoClient.getDatabase("bookstore");
+        MongoClient mongoClient = MongoClients.create("mongodb+srv://Mauzzam:Mauzzamshk123@onlybooks.yrhbd8s.mongodb.net/onlybooks?retryWrites=true&w=majority&appName=Onlybooks");
+        MongoDatabase database = mongoClient.getDatabase("onlybooks");
         usersCollection = database.getCollection("users");
     }
 

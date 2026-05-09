@@ -1,0 +1,50 @@
+## ⚙️ Project Startup Checklist
+
+### Terminal 1: Start the Database (MongoDB)
+
+Keep this window open for the entire session.
+
+1.  **Navigate** to your MongoDB `bin` folder (if `mongod` isn't in your PATH).
+    ```cmd
+    cd "C:\Program Files\MongoDB\Server\8.2\bin"
+    ```
+2.  **Start the Daemon:**
+    ```cmd
+    mongod
+    ```
+    *Wait for the message: `waiting for connections on port 27017`.*
+
+-------------------------------------------------------------------------------------
+
+### Terminal 2: Run the Java Backend (Server)
+
+Keep this window open for the entire session.
+
+1.  **Navigate** to your Maven project root (`pom.xml` location):
+    ```cmd
+    cd C:\Users\admin\Desktop\OnlineBookStore\backend
+    ```
+2.  **Build and Run:** Execute the combined Maven command:
+    ```cmd
+    mvn clean compile exec:java -Dexec.mainClass="com.bookstore.Main"
+    ```
+    *Wait for the message: `Local Backend Server started on http://localhost:8080`.*
+
+-------------------------------------------------------------------------------------
+
+### VS Code/Browser: Launch the Frontend
+
+1.  **Open** the project folder in VS Code.
+2.  Navigate to **`frontend/index.html`**.
+3.  Right-click the file and select **"Open with Live Server"**.
+
+-------------------------------------------------------------------------------------
+
+### Summary Verification
+
+If all steps are successful, the system is running:
+
+|   Component  | Status  |               Location               |
+| **Frontend** | Running | Live Server (e.g., `localhost:5500`) |
+| **Backend**  | Running | Terminal 2 (`localhost:8080`)        |
+| **Database** | Running | Terminal 1 (`localhost:27017`)       |

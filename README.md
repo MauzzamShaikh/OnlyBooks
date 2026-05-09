@@ -78,13 +78,95 @@ OnlyBooks/
 ## 1️⃣ Start MongoDB
 
 Open terminal inside MongoDB `bin` folder:
+# 📚 OnlyBooks – Online Bookstore Platform
+
+An Online Bookstore Platform developed as a Full Stack Java mini project.  
+The platform allows users to discover, search, buy, and rent books through a modern and responsive web interface integrated with Google Books API and MongoDB.
+
+Developed as part of the **Full Stack Java Programming Lab** at **Don Bosco Institute of Technology, Mumbai**.
+
+---
+
+# 🚀 Features
+
+- 🔍 Advanced book search functionality
+- 📖 Dynamic product catalog using Google Books API
+- 👤 User registration and login
+- 🛒 Shopping cart system
+- 📦 Buy and rent books
+- 📜 Order history tracking
+- 💾 MongoDB database integration
+- 🌐 REST API-based backend
+- 📱 Responsive frontend UI
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+## Backend
+- Java
+- Maven
+
+## Database
+- MongoDB
+- MongoDB Compass
+
+## APIs & Libraries
+- Google Books API
+- Gson
+- MongoDB Java Driver
+- jBCrypt
+
+---
+
+# 🏗️ Project Architecture
+
+The application follows a **3-tier architecture**:
+
+1. **Frontend Layer** – Handles UI and user interactions  
+2. **Backend Layer** – Processes business logic and APIs  
+3. **Database Layer** – Stores user and order data in MongoDB  
+
+---
+
+# 📂 Project Structure
+
+```text
+OnlyBooks/
+│
+├── backend/
+│   ├── src/
+│   ├── pom.xml
+│
+├── frontend/
+│   ├── index.html
+│   ├── css/
+│   ├── js/
+│
+└── README.md
+```
+
+---
+
+# ⚙️ How to Run the Project
+
+## 1️⃣ Start MongoDB
+
+Open terminal inside MongoDB `bin` folder:
 
 ```cmd
 mongod
 ```
 
 Wait for:
+Wait for:
 
+```text
 ```text
 waiting for connections on port 27017
 ```
@@ -92,13 +174,17 @@ waiting for connections on port 27017
 ---
 
 ## 2️⃣ Run Backend Server
+## 2️⃣ Run Backend Server
 
+Navigate to backend folder:
 Navigate to backend folder:
 
 ```cmd
 cd backend
+cd backend
 ```
 
+Build and run backend:
 Build and run backend:
 
 ```cmd
@@ -106,7 +192,9 @@ mvn clean compile exec:java -Dexec.mainClass="com.bookstore.Main"
 ```
 
 Wait for:
+Wait for:
 
+```text
 ```text
 Local Backend Server started on http://localhost:8080
 ```

@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const BACKEND_URL = 'http://localhost:8080';
+const BACKEND_URL = 'https://onlybooks-c15e.onrender.com';
 const API_URL = 'https://www.googleapis.com/books/v1/volumes';
 const API_KEY = '';
 const FALLBACK_COVER_URL = 'https://picsum.photos/200/300?blur=2&grayscale';
@@ -85,7 +85,7 @@ async function authUser(endpoint, name, email, password) {
         }
     } catch (error) {
         console.error('Backend error:', error);
-        showToast('Cannot connect to server. Make sure backend is running on port 8080.', 'error');
+        showToast('Cannot connect to server. Make sure backend is running on port https://onlybooks-c15e.onrender.com.', 'error');
     }
 }
 
@@ -1237,7 +1237,7 @@ async function confirmDeleteAccount() {
         }
     } catch (error) {
         console.error('Delete error:', error);
-        showToast('Network error. Is backend running on port 8080?', 'error');
+        showToast('Network error. Is backend running on port https://onlybooks-c15e.onrender.com?', 'error');
     } finally {
         if (btn) btn.disabled = false;
     }

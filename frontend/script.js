@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 const BACKEND_URL = 'https://onlybooks-c15e.onrender.com';
 const API_URL = 'https://www.googleapis.com/books/v1/volumes';
-const API_KEY = '';
+const API_KEY = 'AIzaSyDAZW-rXWcYxJfVi2wC9t1jBzlL_xUfJIA';
 const FALLBACK_COVER_URL = 'https://picsum.photos/200/300?blur=2&grayscale';
 const maxResults = 10;
 
